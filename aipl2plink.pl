@@ -43,7 +43,7 @@ while(<IN>)
 	$c[-1] =~ s/2/ 22/g;
 	$c[-1] =~ s/1/ 12/g;
 	$c[-1] =~ s/0/ 11/g;
-	$c[-1] =~ s/5/ 00/g; # no call
+	$c[-1] =~ s/3|4|5/ 00/g; # no call
         print OUT $c[-1],"\n";
 }
 close IN;
