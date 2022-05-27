@@ -13,3 +13,8 @@ perl change34to5.pl genotypes.imputed genotypes125.imputed kept-snp-list
 ```
 perl aipl2plink.pl findhap-geno-folder ped-filename-prefix
 ```
+
+## Edit alleles in PLINK bim file
+```
+perl edit_bim_alleles.pl 012toATCG.csv original.bim new.bim 
+```
