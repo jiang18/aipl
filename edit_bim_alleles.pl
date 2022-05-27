@@ -7,7 +7,7 @@ my ($coding, $bim1, $bim2) = @ARGV;
 
 my %pos_a1;
 my %pos_a2;
-open IN,$coding;
+open IN,$coding or die "Cannot open $coding: $!\n";
 $_=<IN>;
 while(<IN>) {
 	my @c =split /,/;
@@ -18,7 +18,7 @@ while(<IN>) {
 }
 close IN;
 
-open IN,$bim1;
+open IN,$bim1 or die "Cannot open $bim1: $!\n";
 open OUT,">$bim2";
 while(<IN>) {
 	chomp;
