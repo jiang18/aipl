@@ -22,7 +22,7 @@ open IN,$bim1 or die "Cannot open $bim1: $!\n";
 open OUT,">$bim2";
 while(<IN>) {
 	chomp;
-	my @c =split /\s/;
+	my @c =split /\s+/;
 	if($c[4] eq '1' and $c[5] eq '2') {
 		$c[4] = $pos_a1{$c[3]};
 		$c[5] = $pos_a2{$c[3]};
