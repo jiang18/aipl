@@ -22,6 +22,7 @@ close IN;
 open IN,$bim1;
 open OUT,">$bim2";
 while(<IN>) {
+	s/\r//g;
 	chomp;
 	my @c =split /\s+/;
  
